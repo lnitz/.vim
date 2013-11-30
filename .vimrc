@@ -46,6 +46,7 @@ Bundle 'altercation/vim-colors-solarized'
 " => can omit the username part
 "Bundle 'L9'
 "Bundle 'FuzzyFinder'
+Bundle 'taglist'
 
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
