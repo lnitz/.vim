@@ -13,10 +13,16 @@ let g:Tex_ExecuteUNIXViewerInForeground = 0
 "let g:Tex_ViewRule_dvi = 'xdvi'
 "let g:Tex_ViewRule_ps = 'xdvi'
 "let g:Tex_ViewRule_pdf = 'evince'
-
-let g:Tex_ViewRule_ps = 'okular'
-let g:Tex_ViewRule_pdf = 'okular'
-let g:Tex_ViewRule_dvi = 'okular'
+"
+if has('mac')
+    let g:Tex_ViewRule_ps = 'open -a Preview'
+    let g:Tex_ViewRule_pdf = 'open -a Preview'
+    let g:Tex_ViewRule_dvi = 'open -a Preview'
+elseif has('unix')
+    let g:Tex_ViewRule_ps = 'okular'
+    let g:Tex_ViewRule_pdf = 'okular'
+    let g:Tex_ViewRule_dvi = 'okular'
+endif
 
 let g:Tex_GotoError = 0
 let g:Tex_IgnoreLevel = 3
