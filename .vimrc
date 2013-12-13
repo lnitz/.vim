@@ -198,7 +198,6 @@ function! ToggleVExplorer()
   endif
 endfunction
 map <silent> <C-E> :call ToggleVExplorer()<CR>
-map <silent> ls :call ToggleVExplorer()<CR>
 
 
 "something cool
@@ -222,3 +221,7 @@ au BufWinEnter *.c,*.cpp,*.h,*.hpp silent loadview
 
 "taglist toggle shortcut
 map tt :TlistToggle<CR>
+
+
+set exrc            " enable per-directory .vimrc files
+set secure          " disable unsafe commands in local .vimrc files
